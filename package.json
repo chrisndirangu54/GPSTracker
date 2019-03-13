@@ -1,0 +1,24 @@
+{
+  "name": "androidgpstracking",
+  "version": "1.0.0",
+  "description": "Tracks android device locations",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trishantpahwa/AndroidGPSTracking.git"
+  },
+  "author": "Trishant Pahwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trishantpahwa/AndroidGPSTracking/issues"
+  },
+  "homepage": "https://github.com/trishantpahwa/AndroidGPSTracking#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {}
+}
