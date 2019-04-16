@@ -83,4 +83,9 @@ app.get('/get-locations', function(req, res, next) {
     });
 });
 
+//Get start location and redirect
+/*app.get('/show-map', function(req, res, next) {
+    res.redirect('/static/html/map-view.html?zoom=10&lat=' + '&lng=');
+});*/
+
 app.listen(3000);
