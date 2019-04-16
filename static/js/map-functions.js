@@ -21,7 +21,7 @@ function locationsToArray(locations) {
 function getPaths() {
     var domain = url.toString().split('/')[0];
     var pathsUrl = domain + '/get-locations';
-    $.get(pathsUrl, function(locations) {
+    $.get(pathsUrl).done(function(locations) {
         if(locations) {
             locations = JSON.parse(locations);
             data = locations;
@@ -37,8 +37,13 @@ function getPaths() {
                     }
                 }
                 drawLine(pathArray);
+            } else {
+                console.log('No locations found');
             }
         }
+    }).fail(function(error) {
+        var error = JSON.parse(JSON.stringify(error));
+        console.log('No locations found.');
     });
 }
 
