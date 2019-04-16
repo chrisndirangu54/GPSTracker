@@ -1,5 +1,6 @@
 temp/
 package-lock.json
+tracked-data.json
 # Logs
 logs
 *.log
