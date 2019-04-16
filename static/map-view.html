@@ -122,6 +122,16 @@
                 drawLine(locations[i], locations[i+1])
             }
         }
+        function getPath() {
+            var paths = 'http://localhost:3000/get-locations';
+            var locations = [];
+            $.get(paths, function(data) {
+                console.log(data);
+            });
+        }
+        function updatePath(locations){
+
+        }
         function getZoomSize(locations) {
             var latArray = [];
             var lngArray = [];
@@ -159,9 +169,12 @@
                 zoom: getZoomSize(locations)
             });
             joinPaths(locations);
+            setTimeout(function() {
+                getPath();
+            }, 10);
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{API-Key}}&callback=initMap"
-    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmvwyul-Jk28C1QRzH9CnWH-H69H3L4mY&callback=initMap" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
   </body>
 </html>
